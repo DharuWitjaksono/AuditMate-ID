@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f5f7" />
+  <meta name="description" content="AuditMate ID — ruang belajar akuntansi dan audit." />
+  <title>AuditMate ID — Ruang Belajar Audit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell" id="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#home" aria-label="AuditMate ID beranda">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-copy"><strong>AuditMate</strong><small>INDONESIA</small></span>
+      </a>
+
+      <button class="new-chat-btn" id="new-chat" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+        <span>Percakapan baru</span>
+        <kbd>⌘ K</kbd>
+      </button>
+
+      <div class="side-label">RUANG KERJA</div>
+      <nav class="main-nav">
+        <button class="nav-item active" type="button" data-nav="chat" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.8-3.2A7.5 7.5 0 1 1 20 11.5Z" /></svg>
+          <span>Chat</span><span class="nav-dot"></span>
+        </button>
+        <button class="nav-item" type="button" data-nav="panduan">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 5.5A2.5 2.5 0 0 1 7 3h12.5v16H7a2.5 2.5 0 0 0-2.5 2.5v-16Z"/><path d="M4.5 18.5A2.5 2.5 0 0 1 7 16h12.5M8 7h7M8 10.5h7" /></svg>
+          <span>Panduan audit</span>
+        </button>
+        <button class="nav-item" type="button" data-nav="checklist">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 7 1.5 1.5L9 6M12 7h7M5 14l1.5 1.5L9 13m3 1h7M5 20h14" /></svg>
+          <span>Checklist</span>
+        </button>
+      </nav>
+
+      <div class="side-label recent-label">SESI INI</div>
+      <div class="session-note" id="session-note"><span class="session-indicator"></span><span>Percakapan saat ini</span></div>
+
+      <div class="sidebar-bottom">
+        <div class="privacy-card">
+          <div class="privacy-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.7-3 8-7 10-4-2-7-5.3-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <div><strong>Ruang belajar</strong><p>Gunakan sebagai referensi edukasi, bukan opini audit resmi.</p></div>
+        </div>
+        <button class="profile-button" type="button" id="profile-button" aria-label="Tentang AuditMate ID">
+          <span class="profile-avatar">A</span>
+          <span class="profile-copy"><strong>AuditMate ID</strong><small>Asisten edukasi</small></span>
+          <svg class="more-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area" id="home">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button mobile-menu" id="mobile-menu" type="button" aria-label="Buka navigasi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+          <div class="breadcrumb"><span>Ruang kerja</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg><strong>Chat</strong></div>
+        </div>
+        <div class="topbar-actions">
+          <span class="connection-pill"><span></span> Asisten AI</span>
+          <button class="icon-button" id="theme-toggle" type="button" aria-label="Ganti tema" title="Ganti tema">
+            <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+          </button>
+          <button class="help-button" id="help-button" type="button"><span>?</span> Bantuan</button>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <section class="chat-column" aria-label="Percakapan AuditMate">
+          <div class="chat-heading">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line"></span> RUANG BELAJAR AUDIT</div>
+              <h1>Memahami audit,<br /><em>selangkah demi selangkah.</em></h1>
+              <p class="heading-description">Diskusikan konsep, prosedur, dan checklist audit dengan bahasa yang mudah dipahami.</p>
+            </div>
+          </div>
+
+          <div class="chat-surface">
+            <div class="surface-topline">
+              <div class="assistant-identity">
+                <span class="assistant-avatar"><span class="brand-mark mini"><span></span><span></span><span></span></span></span>
+                <div><strong>AuditMate</strong><span>Asisten akuntansi &amp; audit</span></div>
+              </div>
+              <div class="surface-tools">
+                <span class="secure-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v11H5z"/><path d="M12 14v3"/></svg> Sesi privat</span>
+                <button class="icon-button small" id="clear-chat" type="button" aria-label="Bersihkan percakapan" title="Bersihkan percakapan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 14h10l1-14M9 7V4h6v3"/></svg></button>
+              </div>
+            </div>
+
+            <div class="chat-scroll" id="chat-box" aria-live="polite" aria-label="Riwayat pesan">
+              <div class="welcome-state" id="welcome-state">
+                <div class="welcome-kicker"><span class="pulse-dot"></span> SIAP MEMBANTU ANDA</div>
+                <h2>Apa yang ingin<br /><span>Anda pahami hari ini?</span></h2>
+                <p>Mulai dengan salah satu topik berikut, atau tulis pertanyaan Anda sendiri.</p>
+                <div class="suggestion-grid" id="suggestion-grid">
+                  <button class="suggestion-card" type="button" data-prompt="Apa perbedaan audit internal dan audit eksternal?">
+                    <span class="suggestion-icon icon-blue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7"/></svg></span><span><strong>Dasar-dasar audit</strong><small>Audit internal dan eksternal</small></span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                  </button>
+                  <button class="suggestion-card" type="button" data-prompt="Jelaskan tahapan umum proses audit laporan keuangan.">
+                    <span class="suggestion-icon icon-violet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7zM15 3v5h4M10 13h6m-6 4h6"/></svg></span><span><strong>Proses audit</strong><small>Tahapan audit laporan keuangan</small></span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                  </button>
+                  <button class="suggestion-card" type="button" data-prompt="Apa itu materialitas dalam audit dan bagaimana konsepnya digunakan?">
+                    <span class="suggestion-icon icon-amber"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v5m0 3h.01"/></svg></span><span><strong>Konsep penting</strong><small>Materialitas dalam audit</small></span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                  </button>
+                  <button class="suggestion-card" type="button" data-prompt="Buatkan contoh checklist sederhana untuk audit kas dan setara kas.">
+                    <span class="suggestion-icon icon-green"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6M5 5h4M5 19h4"/></svg></span><span><strong>Praktik &amp; checklist</strong><small>Audit kas dan setara kas</small></span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="composer-wrap">
+              <form id="chat-form" class="composer">
+                <textarea id="user-input" rows="1" placeholder="Tulis pertanyaan tentang akuntansi atau audit…" autocomplete="off" aria-label="Tulis pesan" required></textarea>
+                <div class="composer-bottom">
+                  <div class="composer-hints"><span class="keyboard-hint"><kbd>↵</kbd> kirim</span><span class="keyboard-hint"><kbd>⇧ ↵</kbd> baris baru</span></div>
+                  <button class="send-button" id="send-button" type="submit" aria-label="Kirim pesan"><span>Kirim</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-6-6 6 6-6 6"/></svg></button>
+                </div>
+              </form>
+              <div class="disclaimer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3.8 18h16.4L12 3Z"/><path d="M12 9v4m0 2.5h.01"/></svg> AuditMate dapat keliru. Verifikasi standar dan ketentuan resmi sebelum digunakan.</div>
+            </div>
+          </div>
+          <div class="footer-meta"><span>RUANG BELAJAR AKUNTANSI &amp; AUDIT</span><span>AuditMate ID <i>·</i> Asisten edukasi</span></div>
+        </section>
+
+        <aside class="insight-column" aria-label="Informasi pendukung">
+          <div class="insight-header"><span>PANDUAN CEPAT</span><button class="dots-button" id="insight-menu" type="button" aria-label="Info tambahan">•••</button></div>
+          <section class="focus-card">
+            <div class="focus-top"><span class="focus-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4"/></svg></span><span class="focus-tag">METODE BELAJAR</span></div>
+            <h3>Belajar dengan<br />lebih terstruktur.</h3>
+            <p>Pahami konsep sebelum masuk ke contoh dan penerapan.</p>
+            <div class="focus-steps">
+              <div class="focus-step"><span>1</span><div><strong>Pahami</strong><small>Konsep dan istilah</small></div></div>
+              <div class="step-divider"></div>
+              <div class="focus-step"><span>2</span><div><strong>Analisis</strong><small>Contoh dan prosedur</small></div></div>
+              <div class="step-divider"></div>
+              <div class="focus-step"><span>3</span><div><strong>Terapkan</strong><small>Checklist sederhana</small></div></div>
+            </div>
+          </section>
+          <section class="topic-card">
+            <div class="card-title-row"><h3>Jelajahi topik</h3><span class="tiny-spark">✳</span></div>
+            <div class="topic-list">
+              <button type="button" class="topic-chip" data-prompt="Jelaskan asersi manajemen dalam audit beserta contohnya."><span class="topic-bullet blue"></span>Asersi manajemen<span>↗</span></button>
+              <button type="button" class="topic-chip" data-prompt="Apa yang dimaksud dengan risiko audit? Jelaskan komponennya."><span class="topic-bullet purple"></span>Risiko audit<span>↗</span></button>
+              <button type="button" class="topic-chip" data-prompt="Jelaskan bukti audit yang cukup dan tepat dengan contoh."><span class="topic-bullet orange"></span>Bukti audit<span>↗</span></button>
+              <button type="button" class="topic-chip" data-prompt="Apa perbedaan pengujian pengendalian dan pengujian substantif?"><span class="topic-bullet green"></span>Prosedur pengujian<span>↗</span></button>
+            </div>
+          </section>
+          <section class="note-card"><span class="note-symbol">ⓘ</span><div><strong>Catatan</strong><p>Jawaban AI adalah bahan belajar. Rujuk standar audit, standar akuntansi, dan regulasi yang berlaku.</p></div></section>
+          <div class="mini-footer">DIBUAT UNTUK MEMBANTU ANDA MEMAHAMI</div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <div class="mobile-scrim" id="mobile-scrim"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

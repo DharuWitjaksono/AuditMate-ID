@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "AuditMate ID - Backend API Testing",
+    "description": "Pengujian endpoint lokal AuditMate ID.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://localhost:3000/api/health"
+      }
+    },
+    {
+      "name": "Chat - Single Message",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"conversation\": [\n    {\n      \"role\": \"user\",\n      \"text\": \"Apa perbedaan audit internal dan audit eksternal?\"\n    }\n  ]\n}"
+        },
+        "url": "http://localhost:3000/api/chat"
+      }
+    },
+    {
+      "name": "Chat - Invalid Body (Expected 400)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"message\": \"Halo\"\n}" },
+        "url": "http://localhost:3000/api/chat"
+      }
+    }
+  ]
+}
